@@ -29,6 +29,9 @@
 
 #include <generated/vdso-offsets.h>
 
+
+#define vdso_offset_sigtramp
+
 #define VDSO_SYMBOL(base, name)						   \
 ({									   \
 	(void *)(vdso_offset_##name - VDSO_LBASE + (unsigned long)(base)); \
